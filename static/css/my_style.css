@@ -1,0 +1,26 @@
+h1 {
+    color: blue;
+}
+
+.cuadradoUno {
+    width: 80px;
+    height: 80px;
+    background-color: beige;
+    border: none;
+    display: inline-block;
+    /* margin: 0px */
+}
+
+.cuadradoDos {
+    width: 80px;
+    height: 80px;
+    background-color: grey;
+    border: none;
+    display: inline-block;
+    /* margin: 0px */
+}
+
+.cuadradoUno,
+.cuadradoDos {
+    margin: -2px
+}

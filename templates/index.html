@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/my_style.css') }}">
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/my_script.js') }}"></script> -->
+    <!-- <img src="{{ url_for('static', filename='img/my_img.png') }}"> -->
+
+</head>
+
+<body>
+    <div class="contenedor">
+
+        {% for x in range(0,cantidadUno): %} {% if (x % 2) == 0 %}
+        <div class="subcontenedor">
+            {% for y in range(0,cantidadDos): %} {% if (y % 2) == 0 %}
+            <div class="cuadradoDos" style="background-color:{{nuevocolorUno}}"></div>
+            {% else %}
+            <div class="cuadradoUno" style="background-color:{{nuevocolorDos}}"></div>
+            {% endif %} {% endfor %}
+        </div>
+        {% else %}
+        <div class="subcontenedor">
+            {% for y in range(0,cantidadDos): %} {% if (y % 2) == 0 %}
+            <div class="cuadradoUno" style="background-color:{{nuevocolorDos}}"></div>
+            {% else %}
+            <div class="cuadradoDos" style="background-color:{{nuevocolorUno}}"></div>
+            {% endif %} {% endfor %}
+        </div>
+        {% endif %} {% endfor %}
+    </div>
+</body>
+
+</html>
